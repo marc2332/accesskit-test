@@ -10,3 +10,9 @@ accesskit = "0.11.0"
 accesskit_winit = "0.14.1"
 raw-window-handle = "0.5.2"
 winit = "0.28.6"
+
+skia-safe = { version = "0.63.0", features = ["gl", "textlayout", "svg"] }
+
+[target."cfg(target_os = \"linux\")".dependencies.skia-safe]
+version = "0.63.0"
+features = ["gl", "textlayout", "svg", "x11", "wayland"]
